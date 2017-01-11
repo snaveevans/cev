@@ -10,7 +10,7 @@ secure keyboard entry must be disabled for **cev** to receive key-events.
 
 a binary release is available on Github and through Homebrew
 ```
-brew install koekeishiya/homebrew-formulae/cev
+brew install koekeishiya/formulae/cev
 ```
 
 ## Usage
