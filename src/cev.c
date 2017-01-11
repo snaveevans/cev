@@ -75,12 +75,12 @@ KeyCallback(CGEventTapProxy Proxy, CGEventType Type, CGEventRef Event, void *Con
 internal inline void
 ConfigureRunLoop(void)
 {
-    CGEventMask KhdEventMask = (1 << kCGEventKeyDown) |
+    CGEventMask CevEventMask = (1 << kCGEventKeyDown) |
                                (1 << kCGEventFlagsChanged);
     CevEventTap = CGEventTapCreate(kCGSessionEventTap,
                                    kCGHeadInsertEventTap,
                                    kCGEventTapOptionDefault,
-                                   KhdEventMask,
+                                   CevEventMask,
                                    KeyCallback,
                                    NULL);
 
@@ -96,7 +96,7 @@ internal inline bool
 ParseArguments(int Count, char **Args)
 {
     int Option;
-    const char *Short = "vc:e:w:p:";
+    const char *Short = "v";
     struct option Long[] =
     {
         { "version", no_argument, NULL, 'v' },
